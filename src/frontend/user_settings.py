@@ -3,7 +3,7 @@ from telebot import types
 from settings import LANGUAGES
 from text import (ASK_LANGUAGE, ASK_PASSWORD, ASK_NAME, ASK_LINK, SHOW_PROFILE, CHANGE_PROFILE,
                   MY_COMPANIES, SET_RUN, SET_PAUSE, SETTINGS, BACK,
-                  ASK_WHAT_CHANGE_IN_PROFILE, MY_NAME, MY_LINK, STATUS, WORK, ABOUT)
+                  ASK_WHAT_CHANGE_IN_PROFILE, MY_NAME, MY_LINK, STATUS, WORK, ABOUT, LANGUAGE)
 
 
 def ask_language(bot, language_code, user_id):
@@ -70,7 +70,7 @@ def get_user_profile(bot, language_code, user_id, user_profile):
     keyboard.add(
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         )
     )
 
@@ -97,6 +97,10 @@ def get_user_change_profile_menu(bot, language_code, user_id):
         types.InlineKeyboardButton(
             text=ABOUT[language_code],
             callback_data='user_change_about'
+        ),
+        types.InlineKeyboardButton(
+            text=LANGUAGE[language_code],
+            callback_data='user_change_language'
         ),
         types.InlineKeyboardButton(
             text=BACK[language_code],

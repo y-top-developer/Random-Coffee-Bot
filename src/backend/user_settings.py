@@ -5,7 +5,7 @@ from settings import LANGUAGES
 
 
 @bot.message_handler(commands=['ask_language'])
-def ask_language_main(message):
+def ask_language_handler(message):
     user_id = message.from_user.id
 
     language_code = message.from_user.language_code

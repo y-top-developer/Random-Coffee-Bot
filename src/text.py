@@ -78,7 +78,63 @@ ASK_COMPANY_NAME = {
     'ru': 'Как называется компания?',
     'en': 'What is the company name?'
 }
-ASK_WHO_WILL_BE_COMPANY_ADMIN  = {
+ASK_WHO_WILL_BE_COMPANY_ADMIN = {
     'ru': 'Кто будет админом?',
     'en': 'What will be the admin?'
+}
+USERS = {
+    'ru': 'Пользователи',
+    'en': 'Users'
+}
+USER_SETTINGS = {
+    'ru': 'Настройки пользователя',
+    'en': 'User settings'
+}
+PAIRS = {
+    'ru': 'Пары',
+    'en': 'Pairs'
+}
+GENERATE_PAIRS = {
+    'ru': 'Сгенерировать пары',
+    'en': 'Generate pairs'
+}
+SEND_INVITES = {
+    'ru': 'Отправить приглашения',
+    'en': 'Send invites'
+}
+GET_PASSWORD = {
+    'ru': 'Получить пароль',
+    'en': 'Get password'
+}
+GENERATE_PASSWORD = {
+    'ru': 'Сгенерировать пароли',
+    'en': 'Generate password'
+}
+ASK_WHICH_USER_CHOOSE = {
+    'ru': 'Какого пользователя?',
+    'en': 'Which user?'
+}
+BLOCK = {
+    'ru': 'Заблокировать',
+    'en': 'Block'
+}
+YES = {
+    'ru': 'Да',
+    'en': 'Yes'
+}
+NO = {
+    'ru': 'Нет',
+    'en': 'No'
+}
+ARE_YOU_SURE = {
+    'ru': 'Ты уверен?',
+    'en': 'Are you sure?'
+}
+DONE = {
+    'ru': 'Заблокировать',
+    'en': 'Done'
+}
+LANGUAGE = {
+    'ru': 'Язык',
+    'en': 'Language'
 }

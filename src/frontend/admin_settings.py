@@ -1,6 +1,7 @@
 from telebot import types
 
-from text import CREATE_COMPANY, SET_COMPANY_ADMIN, BACK, SETTINGS, ASK_COMPANY_NAME, ASK_WHO_WILL_BE_COMPANY_ADMIN, MY_COMPANIES
+from text import (CREATE_COMPANY, SET_COMPANY_ADMIN, BACK, SETTINGS,
+                  ASK_COMPANY_NAME, ASK_WHO_WILL_BE_COMPANY_ADMIN, MY_COMPANIES)
 
 
 def get_admin_companies_menu(bot, language_code, user_id, companies):
