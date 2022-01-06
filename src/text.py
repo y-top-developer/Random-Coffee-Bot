@@ -66,3 +66,19 @@ STATUS = {
     'ru': 'статус',
     'en': 'status'
 }
+CREATE_COMPANY = {
+    'ru': 'Создать компанию',
+    'en': 'Create company'
+}
+SET_COMPANY_ADMIN = {
+    'ru': 'Установаить админа компани',
+    'en': 'Set company admin'
+}
+ASK_COMPANY_NAME = {
+    'ru': 'Как называется компания?',
+    'en': 'What is the company name?'
+}
+ASK_WHO_WILL_BE_COMPANY_ADMIN  = {
+    'ru': 'Кто будет админом?',
+    'en': 'What will be the admin?'
+}

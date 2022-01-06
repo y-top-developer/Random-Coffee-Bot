@@ -13,7 +13,7 @@ def ask_language(bot, language_code, user_id):
     keyboard.add(
         *[types.InlineKeyboardButton(
             text=language,
-            callback_data=f'language_code_{language}'
+            callback_data=f'user_language_code_{language}'
         ) for language in LANGUAGES]
     )
 
@@ -40,23 +40,23 @@ def get_user_settings_menu(bot, language_code, user_id):
     keyboard.add(
         types.InlineKeyboardButton(
             text=SHOW_PROFILE[language_code],
-            callback_data='show_profile'
+            callback_data='user_show_profile'
         ),
         types.InlineKeyboardButton(
             text=CHANGE_PROFILE[language_code],
-            callback_data='change_profile'
+            callback_data='user_change_profile'
         ),
         types.InlineKeyboardButton(
             text=MY_COMPANIES[language_code],
-            callback_data='my_companies'
+            callback_data='user_my_companies'
         ),
         types.InlineKeyboardButton(
             text=STATUS[language_code],
-            callback_data='status'
+            callback_data='user_status'
         ),
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         ),
     )
 
@@ -84,23 +84,23 @@ def get_user_change_profile_menu(bot, language_code, user_id):
     keyboard.add(
         types.InlineKeyboardButton(
             text=MY_NAME[language_code],
-            callback_data='change_name'
+            callback_data='user_change_name'
         ),
         types.InlineKeyboardButton(
             text=MY_LINK[language_code],
-            callback_data='change_link'
+            callback_data='user_change_link'
         ),
         types.InlineKeyboardButton(
             text=WORK[language_code],
-            callback_data='change_work'
+            callback_data='user_change_work'
         ),
         types.InlineKeyboardButton(
             text=ABOUT[language_code],
-            callback_data='change_about'
+            callback_data='user_change_about'
         ),
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         )
     )
     bot.send_message(
@@ -114,14 +114,14 @@ def get_user_companies_menu(bot, language_code, user_id, companies):
         keyboard.add(
             types.InlineKeyboardButton(
                 text=company.name,
-                callback_data=f'company_{company.id}'
+                callback_data=f'user_company_{company.id}'
             )
         )
 
     keyboard.add(
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         )
     )
     bot.send_message(
@@ -135,15 +135,15 @@ def ask_mode_menu(bot, language_code, user_id, company):
     keyboard.add(
         types.InlineKeyboardButton(
             text=SET_RUN[language_code],
-            callback_data=f'set_run_{company.id}'
+            callback_data=f'user_set_run_{company.id}'
         ),
         types.InlineKeyboardButton(
             text=SET_PAUSE[language_code],
-            callback_data=f'set_pause_{company.id}'
+            callback_data=f'user_set_pause_{company.id}'
         ),
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         )
     )
 
@@ -157,7 +157,7 @@ def get_user_status(bot, language_code, user_id, status_message):
     keyboard.add(
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='back'
+            callback_data='user_back'
         )
     )
 
