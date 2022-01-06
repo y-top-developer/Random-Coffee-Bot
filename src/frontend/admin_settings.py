@@ -1,6 +1,6 @@
 from telebot import types
 
-from text import (CREATE_COMPANY, SET_COMPANY_ADMIN, BACK, SETTINGS,
+from frontend.text import (CREATE_COMPANY, SET_COMPANY_ADMIN, BACK, SETTINGS,
                   ASK_COMPANY_NAME, ASK_WHO_WILL_BE_COMPANY_ADMIN, MY_COMPANIES)
 
 

@@ -138,3 +138,17 @@ LANGUAGE = {
     'ru': 'Язык',
     'en': 'Language'
 }
+CONGRATULATIONS_WITH_SUCCESS_INITIALIZATION = {
+    'ru': 'Поздравляю! /help',
+    'en': 'Congrats! /help'
+}
+USER_PROFILE_FORMAT = {
+    'ru': ('{name}\n'
+           'Профиль: {link}\n\n'
+           'Чем занимается: {work}\n'
+           'Зацепки для начала разговора: {about}'),
+    'en': ('{name}\n'
+           'Profile: {link}\n\n'
+           'Work: {work}\n'
+           'About: {about}')
+}

@@ -1,9 +1,10 @@
 from telebot import types
 
 from settings import LANGUAGES
-from text import (ASK_LANGUAGE, ASK_PASSWORD, ASK_NAME, ASK_LINK, SHOW_PROFILE, CHANGE_PROFILE,
-                  MY_COMPANIES, SET_RUN, SET_PAUSE, SETTINGS, BACK,
-                  ASK_WHAT_CHANGE_IN_PROFILE, MY_NAME, MY_LINK, STATUS, WORK, ABOUT, LANGUAGE)
+from frontend.text import (ASK_LANGUAGE, ASK_PASSWORD, ASK_NAME, ASK_LINK, SHOW_PROFILE, CHANGE_PROFILE,
+                           MY_COMPANIES, SET_RUN, SET_PAUSE, SETTINGS, BACK,
+                           ASK_WHAT_CHANGE_IN_PROFILE, MY_NAME, MY_LINK, STATUS, WORK, ABOUT, LANGUAGE,
+                           CONGRATULATIONS_WITH_SUCCESS_INITIALIZATION, USER_PROFILE_FORMAT)
 
 
 def ask_language(bot, language_code, user_id):
@@ -31,6 +32,11 @@ def ask_name(bot, language_code, user_id):
 
 def ask_link(bot, language_code, user_id):
     bot.send_message(user_id, ASK_LINK[language_code])
+
+
+def success_initialization(bot, language_code, user_id):
+    bot.send_message(
+        user_id, CONGRATULATIONS_WITH_SUCCESS_INITIALIZATION[language_code])
 
 
 def get_user_settings_menu(bot, language_code, user_id):
@@ -64,13 +70,21 @@ def get_user_settings_menu(bot, language_code, user_id):
         user_id, SETTINGS[language_code], reply_markup=keyboard)
 
 
-def get_user_profile(bot, language_code, user_id, user_profile):
+def get_user_profile(bot, language_code, user_id, user):
+
+    user_profile = USER_PROFILE_FORMAT[language_code].format(
+        name=user.name,
+        link=user.link,
+        work=user.work,
+        about=user.about
+    )
+
     keyboard = types.InlineKeyboardMarkup()
 
     keyboard.add(
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='user_back'
+            callback_data='user_back_get_user_profile'
         )
     )
 
@@ -104,7 +118,7 @@ def get_user_change_profile_menu(bot, language_code, user_id):
         ),
         types.InlineKeyboardButton(
             text=BACK[language_code],
-            callback_data='user_back'
+            callback_data='user_back_get_user_change_profile_menu'
         )
     )
     bot.send_message(

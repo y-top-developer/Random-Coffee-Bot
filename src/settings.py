@@ -1,0 +1,3 @@
+TELEGRAM_TOKEN = 
+ADMIN = 
+LANGUAGES = ['en', 'ru']
